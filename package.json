@@ -1,0 +1,22 @@
+{
+  "name": "ttcraft_bot",
+  "version": "1.0.0",
+  "description": "bot voor ttcraft",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon"
+  },
+  "keywords": [
+    "ttcraft",
+    "bot"
+  ],
+  "author": "Chris",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
