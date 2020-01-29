@@ -42,42 +42,6 @@ bot.on("ready", () => {
     });
 });
 
-bot.on("guildMemberAdd", member => {
-
-    const channel = member.guild.channels.find("name", "👋welkom");
-    if (!channel) console.log("Kanaal `Welkom` niet gevonden..");
-
-    var JoinMessage = new discord.RichEmbed()
-        .setTitle("_Er is een speler gejoind!_")
-        .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
-        .setDescription(`Hey ${member.user.username}, **Welkom in de server!**`)
-        .setColor("#00ff00")
-        .setTimestamp()
-        .setFooter("Join system");
-
-    channel.send(JoinMessage);
-
-});
-
-
-bot.on("guildMemberRemove", member => {
-
-    const lchannel = member.guild.channels.find("name", "👋tot-ziens");
-    if (!lchannel) console.log("Kanaal `tot-ziens` niet gevonden..");
-
-    var JoinMessage = new discord.RichEmbed()
-        .setTitle("_Er is een speler weggegaan!_")
-        .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
-        .setDescription(`${member.user.username} is weggegaan!`)
-        .setColor("#ff0000")
-        .setTimestamp()
-        .setFooter("Leave system");
-
-    lchannel.send(JoinMessage);
-
-});
-
-
 bot.on("message", async message => {
 
     if (message.author.bot) return;
